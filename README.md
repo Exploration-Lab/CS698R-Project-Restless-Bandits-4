@@ -1,7 +1,7 @@
 <!-- <<<<<<< HEAD -->
 # CS698R-Project-Restless-Bandits-4
 <!-- ======= -->
-# Restless Multi Arm Bandit
+# Restless Multi Arm Bandit - [Demo] (https://drive.google.com/file/d/1Q0mspFnMajq0CxqAuFm-XtaIJ3bUHC4d/view?usp=sharing)
 ## Abstract
 
 The Restless Multi-Armed Bandit Problem (RMABP) is essentially a game between a player and an environment.
