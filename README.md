@@ -8,7 +8,8 @@ The Restless Multi-Armed Bandit Problem (RMABP) is essentially a game between a 
 There are K arms and the state of each arm keeps evolving according to an underlying distribution and it transitions
 at every time slot during the episode (one full play of the game). At each time slot, the player pulls one of the arms
 and receives a reward. The goal of the game is to maximize the reward received over T time steps. DQN and PPO have been used with 
-the memory matrix as the input state space which includes the last 'h' rewards of each state for further decision making. 
+the memory matrix as the input state space which includes the last 'h' rewards of each state for further decision making. The 
+updated approach gives more reward compared to SOTA input states.
 
 
 ## Research Survey 
