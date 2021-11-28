@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+<!-- <<<<<<< HEAD -->
 # CS698R-Project-Restless-Bandits-4
-=======
+<!-- ======= -->
 # Restless Multi Arm Bandit
 ## Introduction
 
@@ -26,7 +26,8 @@ approach to a multi-agent setting.
 
 ## Problem Statement [[5]](#5)
 
-![](https://github.com/ArpitJIndal29/CS698R/blob/main/images/RMAB.JPG) 
+<!-- ![](https://github.com/ArpitJIndal29/CS698R/blob/main/images/RMAB.JPG)  -->
+![alt text](https://github.com/Exploration-Lab/CS698R-Project-Restless-Bandits-4/blob/main/images/RMAB.JPG)
 
 The four-armed bandit being modelled has one non-terminal (starting) state and four
 terminal states. The agent chooses one action vis-a-vis one arm. And this action places the
@@ -57,7 +58,8 @@ At first, we have used classical Reinforcement Learning techniques to train the 
 and pure exploitation, epsilon greedy, decaying epsilon greedy, softmax and UCB. Though UCB and Softmax worked
 better than other algorithms, all these techniques got stuck at some sub-optimal level.
 
-![](https://github.com/ArpitJIndal29/CS698R/blob/main/images/reward.png)
+<!-- ![](https://github.com/ArpitJIndal29/CS698R/blob/main/images/reward.png) -->
+![alt text](https://github.com/Exploration-Lab/CS698R-Project-Restless-Bandits-4/blob/main/images/reward.png)
 
 We then moved to deep learning-based algorithms to get better results. We defined the whole game of 200 steps as an episode and each draw of arms as a time-step. And at each step, we defined the state of the environment as a collection of previous m actions and corresponding observed rewards, i.e. s<sub>t</sub> = [a<sub>t−1</sub>, r<sub>t−1</sub>, . . . , a<sub>t−m</sub>, r<sub>t−m</sub>]. We then trained the agent using DQN while considering m as a hyperparameter. This approach gave a significant improvement over classical algorithms but there is some flaw in the assumption that information about previous m actions and rewards is enough to predict the next step because if all the ‘m’ steps are of the same action the agent will have no information about other arm rewards. So, we modified our state as a 4*k matrix where i<sup>th</sup> row contains the last ‘k’ reward history of the
 i<sup>th</sup> arm. After tuning hyperparameters, this agent takes optimal action almost
@@ -99,9 +101,9 @@ every time. We have then used DDQN and PPO to further improve the performance.
 ## Results and Analysis
 
 <div float:"left">
-<img src="https://github.com/ArpitJIndal29/CS698R/blob/main/images/dqn_training_trend_high.jpg" width="300">
-<img src="https://github.com/ArpitJIndal29/CS698R/blob/main/images/ppo_training_trend_high.jpg" width="300">
-<img src="https://github.com/ArpitJIndal29/CS698R/blob/main/images/dqn_ppo_evaluation_trend_high.jpg" width="300">
+<img src="https://github.com/Exploration-Lab/CS698R-Project-Restless-Bandits-4/blob/main/images/dqn_training_trend_high.jpg" width="300">
+<img src="https://github.com/Exploration-Lab/CS698R-Project-Restless-Bandits-4/blob/main/images/ppo_training_trend_high.jpg" width="300">
+<img src="https://github.com/Exploration-Lab/CS698R-Project-Restless-Bandits-4/blob/main/images/dqn_ppo_evaluation_trend_high.jpg" width="300">
 </div>
 
 The reward function of the environment is noisy and the agent does not have access to environment dynamics and
@@ -120,8 +122,8 @@ a random scheme in which an action is chosen at random at every time step. We ob
 DQN, especially in the later part of the game when trend and high volatility takes full effect.
 
 <div float:"left">
-<img src="https://github.com/ArpitJIndal29/CS698R/blob/main/images/1game_dqn_evaluation_trend_high.jpg" width="450">
-<img src="https://github.com/ArpitJIndal29/CS698R/blob/main/images/1game_ppo_evaluation_trend_high.jpg" width="450">
+<img src="https://github.com/Exploration-Lab/CS698R-Project-Restless-Bandits-4/blob/main/images/1game_dqn_evaluation_trend_high.jpg" width="450">
+<img src="https://github.com/Exploration-Lab/CS698R-Project-Restless-Bandits-4/blob/main/images/1game_ppo_evaluation_trend_high.jpg" width="450">
 </div>
 
 We observe that as soon as the value of the arm that the agent is following falls down, agent tries to switch the arm and is successful in most cases.
@@ -170,4 +172,4 @@ Riedmiller. Playing atari with deep reinforcement learning, 2013.
 <a id="7">[7]</a>
 John Schulman, Filip Wolski, Prafulla Dhariwal, Alec Radford, and Oleg Klimov. Proximal policy optimization
 algorithms, 2017.
->>>>>>> CS698R/main
+<!-- >>>>>>> CS698R/main -->
