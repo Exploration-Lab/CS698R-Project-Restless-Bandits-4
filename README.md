@@ -11,6 +11,10 @@ and receives a reward. The goal of the game is to maximize the reward received o
 the memory matrix as the input state space which includes the last 'h' rewards of each state for further decision making. The 
 updated approach gives more reward compared to SOTA input states.
 
+## How to Run
+1. Clone the repository using: ```git clone ```.
+2. To run the baseline implementations of Epsilon Greedy, SoftMax, UCB, open the ```baseline.ipynb``` file and do Run All. It imports ```epsgreedy.py```, ```softmax.py``` and ```ucb.py``` files.
+3. To run the code for DDQN and PPO, open the ```MAB_DRL.ipynb``` and perform Run All.
 
 ## Research Survey 
 
